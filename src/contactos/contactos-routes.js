@@ -13,11 +13,11 @@ router.get('/', getContactos);
 router.get('/:id', getContactoById);
 
 // rutas Post
-router.get('/', uploadContactoImage.single('image'), validateCreateContacto, createContactos);
+router.post('/', uploadContactoImage.single('photo'), validateCreateContacto, createContactos);
 
 
 // Rutas Put
-router.put('/:id',uploadContactoImage.single('image'), updateContacto);
+router.put('/:id',uploadContactoImage.single('photo'), updateContacto);
 
 // Rutas DELETE/PATCH esto lo que hace es Activar o desactivar al contacto sin borrarlo
 
